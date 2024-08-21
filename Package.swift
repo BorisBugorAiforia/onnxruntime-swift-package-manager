@@ -108,9 +108,9 @@ if let ext_pod_archive_path = ProcessInfo.processInfo.environment["ORT_EXTENSION
     package.targets.append(Target.binaryTarget(name: "onnxruntime_extensions", path: ext_pod_archive_path))
 } else {
      // ORT Extensions 0.11.0 release
-      package.targets.append(
-         Target.binaryTarget(name: "onnxruntime_extensions",
-                             url: "https://download.onnxruntime.ai/pod-archive-onnxruntime-extensions-c-0.11.0.zip",
-                             checksum: "289e8b7847116744946003ed21e1ac9ee4897c3aca48e261238e329634c27c0a")
-      )
+    package.targets.append(
+        Target.binaryTarget(
+            name: "onnxruntime_extensions",
+            path: "./pod-archive-onnxruntime-extensions-c-0.11.0.zip")
+    )
  }
