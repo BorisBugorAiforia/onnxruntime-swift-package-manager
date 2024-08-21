@@ -98,9 +98,9 @@ if let pod_archive_path = ProcessInfo.processInfo.environment["ORT_IOS_POD_LOCAL
 } else {
     // ORT 1.18.0 release
     package.targets.append(
-       Target.binaryTarget(name: "onnxruntime",
-                           url: "https://download.onnxruntime.ai/pod-archive-onnxruntime-c-1.18.0.zip",
-                           checksum: "9f196b7d09129177f529be63a91e18731ab1ccc830828e29edcbe95bd652fa5c")
+        Target.binaryTarget(
+            name: "onnxruntime",
+            path: "./pod-archive-onnxruntime-c-1.18.0.zip")
     )
 }
 
